@@ -1,13 +1,13 @@
 import styles from './FriendList.module.css';
 import PropTypes from 'prop-types';
 
-function friendOnline(status) {
-  if (status) {
-    return '#2ECC71';
-  } else {
-    return '#E74C3C';
-  }
-}
+// function friendOnline(status) {
+//   if (status) {
+//     return '#2ECC71';
+//   } else {
+//     return '#E74C3C';
+//   }
+// }
 
 export default function FriendList ({ friends}) {
   return (
@@ -15,13 +15,19 @@ export default function FriendList ({ friends}) {
       <ul className={styles.friendlist}>
         {friends.map(friend => (
           <li className={styles.item} key={friend.id}>
-            <span
+            {/* <span
               className={styles.status}
               style={{ color: friendOnline(friend.isOnline) }}
             >
               {' '}
               ●
-            </span>
+            </span> */}
+
+          {friend.isOnline ? (
+            <span className={styles.online}></span>
+          ) : (
+            <span className={styles.offline}></span>
+          )}
             <img
               className={styles.avatar}
               src={friend.avatar}

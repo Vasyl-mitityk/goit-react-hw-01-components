@@ -1,4 +1,5 @@
 import styles from './TransactionHistory.module.css';
+import PropTypes from 'prop-types';
 
 
 function firstLetter(string) {
@@ -29,6 +30,11 @@ export default function  TransactionHistory ({ items })  {
     </table>
     </div>
   );
+};
+
+TransactionHistory.propTypes = {
+  type: PropTypes.string,
+  currency: PropTypes.string,
 };
 
 

@@ -25,10 +25,32 @@
   background-color: #858585;
   border-radius: 10px;
 }
-.status {
+/* .status {
   margin: 15px;
   font-size: 55px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+} */
+
+.online {
+  margin: 15px;
+  font-size: 55px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: green;
 }
+
+.offline {
+  margin: 15px;
+  font-size: 55px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+}
+
 .name {
   margin-left: 18px;
   font-size: 28px;

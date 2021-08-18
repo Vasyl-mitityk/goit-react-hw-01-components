@@ -28,6 +28,7 @@ export default function Statistics  ({ title, stats })  {
 
 Statistics.propTypes = {
   title: PropTypes.string,
+  label: PropTypes.string.isRequired,
   
 };
 
