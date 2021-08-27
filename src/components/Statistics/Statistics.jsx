@@ -6,7 +6,7 @@ const colorBg = item => {
   return `${colorArray[Number(item.id.replace(/[^0-9]/g, '')) % 5]}`;
 };
 
-export default function Statistics  ({ title, stats })  {
+function Statistics  ({ title, stats })  {
   return (
     <section className={styles.statistics}>
       <h2 className={styles.title}>{title}</h2>
@@ -26,13 +26,21 @@ export default function Statistics  ({ title, stats })  {
   );
 };
 
+
+
 Statistics.propTypes = {
   title: PropTypes.string,
-  label: PropTypes.string.isRequired,
+  
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      percentage: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ),
+  
+  
   
 };
 
-Statistics.defaultProps = {
-  title: '',
-  label: 'format',
-};
+export default Statistics;
